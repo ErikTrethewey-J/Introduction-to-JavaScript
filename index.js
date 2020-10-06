@@ -26,6 +26,8 @@ if (votingAge >= 18) {
   return false;
 }
 
+// Adding comment for commit.
+// Testing testing.
 /*
 Task 1b - Values
 
