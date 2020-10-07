@@ -18,11 +18,10 @@ Do the following:
    HINT: no function required
 */
 
-const votingAge = 18;
+const votingAge = "45";
 if (votingAge >= 18) {
   console.log("true");
 }
-5;
 /*
 Task 1b - Values
 
@@ -33,10 +32,10 @@ Do the following:
 
    HINT: no function required
 */
-// let name = "Miachael";
-// let name1 = "Tommy";
-// name = name1;
-// console.log(name);
+let name = "Miachael";
+let name1 = "Tommy";
+name = name1;
+console.log(name);
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -47,7 +46,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let num = "1999";
+num = 1999;
+console.log(num);
 /*
 Task 1d - Multiply
  
@@ -57,9 +58,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/) {
+function multiply(a, b) {
   /*add your code here*/
+  return a * b;
 }
+console.log(multiply(5, 3));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -71,11 +74,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(humanYears, b) {
+function dogYears(humanYears) {
   /*add your code here*/
-  return humanYears * b;
+  return humanYears * 7;
 }
-console.log(dogYears(5, 7));
+dogYears(5);
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
@@ -139,39 +142,39 @@ Use the game function below to do the following:
   
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
-
-
-
-  /*add your code here*/
-  function game(user) {
-    let robot = Math.floor(Math.random() * 3);
-  let choice = rock;
-  if (robot === 0) {
-    choice = "rock";
-  } else if (robot === 2) {
-    choice = "paper";
-  } else {
-    choice = "scissors";
-
-    console.log("Computer picked " + choice);
-    if (user === "rock" && robot === "rock" || user === "paper" && robot === "paper" || user === "scissors" && robot === "scissors") {
-       console.log("is this working?");
-       return "it's a tie";
-     } else if (user === "paper" && robot === "scissors" || user === "scissors" && robot === "rock" || user === "rock" && robot === "paper") {
-       return "you lose!";
-     } else if (user === "scissors" && robot === "paper" || user === "rock" && robot === "scissors" || user === "paper" && robot === "rock") {
-       return "you win!";
-   }
-   game("scissors");
-//   if (user === "rock" && robot === "rock") {
-//     console.log("is this working?");
-//     return "this is a tie";
-//   } else if (user === "paper" && robot === "scissors" || user === "paper" && robot === "paper" || user === "scissors" && robot === "scissors") {
-//     return "this is a tie";
-//   } else if (user === "scissors" && robot === "paper" || user === "rock" && robot === "scissors" || user === "paper" && robot === "rock") {
-//     return "you win";
-//   } else (user === 'paper' && robot === 'scissors' || user === 'rock' && robot === 'paper' || )
-// game("rock", robot);
+let robot = Math.floor(Math.random() * 3);
+let choice = "rock";
+if (robot === 0) {
+  choice = "rock";
+} else if (robot === 2) {
+  choice = "paper";
+} else {
+  choice = "scissors";
+}
+/*add your code here*/
+function game(user, robot) {
+  if (
+    (user === "rock" && robot === "rock") ||
+    (user === "paper" && robot === "paper") ||
+    (user === "scissors" && robot === "scissors")
+  ) {
+    console.log("is this working?");
+    return "it's a tie";
+  } else if (
+    (user === "paper" && robot === "scissors") ||
+    (user === "scissors" && robot === "rock") ||
+    (user === "rock" && robot === "paper")
+  ) {
+    return "you lose!";
+  } else if (
+    (user === "scissors" && robot === "paper") ||
+    (user === "rock" && robot === "scissors") ||
+    (user === "paper" && robot === "rock")
+  ) {
+    return "you win!";
+  }
+}
+console.log(game("paper", robot));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -184,10 +187,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/) {
+function miles(km) {
   /*add your code here*/
+  return km * 0.621371;
 }
-
+console.log(miles(20));
 //Task 5b - Feet to CM
 /*
 Using the feet function below do the following:
@@ -196,8 +200,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/) {
+function feet(cm) {
   /*add your code here*/
+  return cm / 30.48;
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -210,10 +215,16 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/) {
+function annoyingSong(num) {
   /*add your code here*/
+  for (let i = 0; i < num; i++);
+  {
+    return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${
+      num - 1
+    } bottles of soda on the wall`;
+  }
 }
-
+annoyingSong(5);
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
@@ -229,9 +240,14 @@ Using the grade function below do the following:
    below 60 = F
 */
 
-function grade(/*add your code here*/) {
+function grade(percent) {
   /*add your code here*/
+  if (percent >= 90);
+  return "You got a A";
+} else if {(percent >= 80){
+  return "You got a B"
 }
+grade(90);
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
