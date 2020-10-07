@@ -18,11 +18,11 @@ Do the following:
    HINT: no function required
 */
 
-// const votingAge = 18;
-// if (votingAge >= 18);
-// console.log("You are " + votingAge(35) + " you can vote!");
-// Adding comment for commit.
-// Testing testing.testing testing
+const votingAge = 18;
+if (votingAge >= 18) {
+  console.log("true");
+}
+5;
 /*
 Task 1b - Values
 
@@ -71,15 +71,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-// function dogYears(a, b) {
-//   console.log(4, 7);
-//   return a * b;
-// }
-
-function dogYears(/*add your code here*/) {
+function dogYears(humanYears, b) {
   /*add your code here*/
+  return humanYears * b;
 }
-
+console.log(dogYears(5, 7));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
@@ -144,9 +140,38 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/) {
+
+
   /*add your code here*/
-}
+  function game(user) {
+    let robot = Math.floor(Math.random() * 3);
+  let choice = rock;
+  if (robot === 0) {
+    choice = "rock";
+  } else if (robot === 2) {
+    choice = "paper";
+  } else {
+    choice = "scissors";
+
+    console.log("Computer picked " + choice);
+    if (user === "rock" && robot === "rock" || user === "paper" && robot === "paper" || user === "scissors" && robot === "scissors") {
+       console.log("is this working?");
+       return "it's a tie";
+     } else if (user === "paper" && robot === "scissors" || user === "scissors" && robot === "rock" || user === "rock" && robot === "paper") {
+       return "you lose!";
+     } else if (user === "scissors" && robot === "paper" || user === "rock" && robot === "scissors" || user === "paper" && robot === "rock") {
+       return "you win!";
+   }
+   game("scissors");
+//   if (user === "rock" && robot === "rock") {
+//     console.log("is this working?");
+//     return "this is a tie";
+//   } else if (user === "paper" && robot === "scissors" || user === "paper" && robot === "paper" || user === "scissors" && robot === "scissors") {
+//     return "this is a tie";
+//   } else if (user === "scissors" && robot === "paper" || user === "rock" && robot === "scissors" || user === "paper" && robot === "rock") {
+//     return "you win";
+//   } else (user === 'paper' && robot === 'scissors' || user === 'rock' && robot === 'paper' || )
+// game("rock", robot);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
