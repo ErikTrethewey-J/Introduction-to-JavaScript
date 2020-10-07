@@ -242,12 +242,12 @@ Using the grade function below do the following:
 
 function grade(percent) {
   /*add your code here*/
-  if (percent >= 90);
-  return "You got a A";
-} else if {(percent >= 80){
-  return "You got a B"
+  if (percent >= 90) {
+    return "You got a A";
+  } else percent >= 80 || percent === 89;
+  return "you got a B";
 }
-grade(90);
+grade(80);
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
